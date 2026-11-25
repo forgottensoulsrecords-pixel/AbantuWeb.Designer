@@ -12,7 +12,7 @@
 
 body { background: #f5eee5; color: var(--ink); }
 .topbar { height: 86px; background: #fff8ef; border-bottom-color: #e8c29f; }
-.main-logo { width: 278px; height: 70px; }
+.main-logo { width: 296px; height: 74px; }
 .hero { background: linear-gradient(112deg, #fff1df 0%, #f7d8b7 48%, #d98a50 100%); }
 .hero:before { background: radial-gradient(circle at 8% 12%, #fffdf6 0 8%, transparent 28%), linear-gradient(135deg, transparent 58%, #713b1c20 58% 59%, transparent 59%); }
 .eyebrow { color: #70513c; }
@@ -38,14 +38,14 @@ body { background: #f5eee5; color: var(--ink); }
 .brush-payment { background: #171717; }
 footer { background: #171717; }
 
-/* Give the supplied primary wordmark more presence without overpowering navigation. */
+/* A modest wordmark increase keeps the logo prominent without crowding navigation. */
 @media (max-width: 900px) {
-  .main-logo { width: 238px; height: 64px; }
+  .main-logo { width: 250px; height: 64px; }
 }
 @media (max-width: 620px) {
   .topbar { height: 72px; }
-  .main-logo { width: 190px; height: 58px; }
+  .main-logo { width: 200px; height: 56px; }
 }
 @media (max-width: 370px) {
-  .main-logo { width: 162px; height: 52px; }
+  .main-logo { width: 170px; height: 50px; }
 }
