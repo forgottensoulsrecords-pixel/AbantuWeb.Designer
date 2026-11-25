@@ -3,109 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#087bd7" />
-  <title>AbantuWeb SA — Websites for South African Businesses</title>
+  <meta name="theme-color" content="#071b34" />
+  <meta name="description" content="Professional, mobile-friendly websites for South African businesses. Choose a once-off website package and request your WhatsApp invoice." />
+  <title>AbantuWeb SA — Your Business, Brilliantly Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="flyer">
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="brand-copy">
-          <h1><span>Abantu</span><strong>Web</strong></h1>
-          <h2>Abantu <strong>Web SA</strong></h2>
-          <p>Fast, mobile, friendly websites</p>
-        </div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="AbantuWeb home"><span class="brand-mark">A</span><span>Abantu<span class="wordmark-blue">Web</span><small>WEB DESIGN STUDIO</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#packages">Packages</a><a href="#addons">Add-ons</a><a href="#how-it-works">How it works</a><a class="nav-cta" href="https://wa.me/27677574436?text=Hi%20AbantuWeb%20SA%2C%20I%27d%20like%20to%20discuss%20a%20website." target="_blank" rel="noopener">Let’s talk <span aria-hidden="true">↗</span></a></nav>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
 
-        <div class="mockup" aria-label="Laptop and mobile website preview">
-          <div class="laptop">
-            <div class="laptop-screen">
-              <div class="demo-nav"><b>Your Business</b><span>Home &nbsp; Services &nbsp; About &nbsp; Shop</span></div>
-              <div class="demo-hero">
-                <div><strong>Build Your<br>Dream Online</strong><small>Quick products, Great service</small><button>Shop Now</button></div>
-              </div>
-              <div class="demo-products"><i>🛍️</i><i>👟</i><i>🌿</i></div>
-            </div>
-            <div class="laptop-base"></div>
-          </div>
-          <div class="phone">
-            <div class="phone-bar">Your Business</div>
-            <div class="phone-hero"><b>Build Your<br>Dream Online</b><button>Enquire</button></div>
-            <div class="phone-icon">🛍️</div>
-          </div>
-        </div>
-
-        <a class="offer-pill" href="#packages">Pay Once. Own It. No Monthly Fees.</a>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> WEB DESIGN FOR AMBITIOUS BUSINESSES</p>
+        <h1>Your business<br>deserves a <span>better website.</span></h1>
+        <p class="hero-description">We build beautiful, mobile-friendly websites that help South African businesses look their best and grow online.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#packages">Explore our packages <span aria-hidden="true">↓</span></a><a class="text-link" href="https://wa.me/27677574436?text=Hi%20AbantuWeb%20SA%2C%20I%27d%20like%20to%20discuss%20a%20website." target="_blank" rel="noopener">Chat to our team <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-proof"><div class="proof-avatars" aria-hidden="true"><i>A</i><i>W</i><i>+</i></div><p><strong>Made for your next big thing.</strong><br>Personal service, clear once-off pricing.</p></div>
       </div>
+      <div class="hero-visual" aria-label="Website preview displayed on a laptop">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="website-window"><div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>yourbusiness.co.za</span><span class="window-lock">●</span></div>
+          <div class="site-preview"><div class="preview-nav"><b>YOUR BRAND</b><span>HOME &nbsp; ABOUT &nbsp; SHOP &nbsp; CONTACT</span><button aria-hidden="true">☰</button></div><div class="preview-hero"><div class="preview-copy"><small>DESIGNED TO MAKE AN IMPRESSION</small><h2>Make room<br>for <em>what’s next.</em></h2><p>Thoughtful design. A better online experience.</p><span class="preview-button">EXPLORE THE COLLECTION&nbsp; →</span></div><div class="preview-art"><div class="art-sun"></div><div class="art-vase vase-one"></div><div class="art-vase vase-two"></div><div class="art-leaf leaf-one"></div><div class="art-leaf leaf-two"></div><div class="art-table"></div></div></div><div class="preview-footer"><span>Thoughtfully made for you</span><span>DISCOVER&nbsp; ↓</span></div></div>
+        </div><div class="laptop-lip"></div><div class="floating-tag"><span class="tag-check">✓</span><span><b>Responsive by design</b><small>Looks great on every screen</small></span></div>
+      </div>
+      <a class="scroll-cue" href="#packages"><span></span> SCROLL TO EXPLORE</a>
     </section>
 
-    <section class="packages" id="packages">
-      <article class="package">
-        <h3>STARTER WEBSITE</h3>
-        <div class="price">R1,640</div>
-        <p class="once">once-off</p>
-        <p class="perfect">Perfect for starting out</p>
-        <div class="rule"></div>
-        <ul>
-          <li>1 Page Website</li><li>Up to 5 Products / Services</li><li>Home, About, Contact</li>
-          <li>WhatsApp Order Button</li><li>Instagram + TikTok Links</li><li>Works on Phone</li>
-          <li>Free Hosting (GitHub)</li><li>Delivery: 2–3 Days</li>
-        </ul>
-      </article>
-
-      <article class="package featured">
-        <div class="popular">MOST POPULAR</div>
-        <h3>BUSINESS WEBSITE</h3>
-        <div class="price">R2,500</div>
-        <p class="once">once-off</p>
-        <div class="rule"></div>
-        <ul>
-          <li>Full Shop Website</li><li>Up to 20 Products</li><li>Categories / Filter Buttons</li>
-          <li>Product Popup — Colour, Size, Quantity, Add to Bag</li><li>WhatsApp Checkout</li>
-          <li>Our Story + Contact Page</li><li>Logo + Colours Matching Your Brand</li>
-          <li>Free Hosting (GitHub)</li><li>Delivery: 3–5 Days</li>
-        </ul>
-      </article>
-
-      <article class="package">
-        <h3>PRO ONLINE SHOP</h3>
-        <div class="price">R4,500</div>
-        <p class="once">once-off</p>
-        <p class="perfect">For serious selling</p>
-        <div class="rule"></div>
-        <ul>
-          <li>Everything in BUSINESS</li><li>Up to 50 Products</li><li>Search Bar</li>
-          <li>Online Payment — Card / Payfast / Yoco</li><li>Delivery Options</li>
-          <li>You can add products yourself</li><li>Domain.co.za Setup (Domain cost separate)</li>
-          <li>Delivery: 5–7 Days</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="extras">
-      <article class="addons">
-        <h3><span class="mini-icon">＋</span> ADD-ONS</h3>
-        <dl><div><dt>Hosting + Email (1 year)</dt><dd>R830</dd></div>
-            <div><dt>Domain.co.za (1 year)</dt><dd>R250</dd></div>
-            <div><dt>Update / Change (per update)</dt><dd>R400</dd></div>
-            <div><dt>Logo Design</dt><dd>R400</dd></div>
-            <div><dt>Extra 10 Products</dt><dd>R600</dd></div>
-            <div><dt>Business WhatsApp Setup</dt><dd>FREE</dd></div></dl>
-      </article>
-
-      <aside class="side">
-        <article class="payment">
-          <div class="card-icon">▣</div>
-          <div><h3>PAYMENT:</h3><p>Total to start: R2,470 – R1,640<br><b>Website + R830 Hosting.</b></p><small>50% Deposit to start, 50% when website is done.</small></div>
+    <section class="packages section" id="packages">
+      <div class="section-heading"><div><p class="eyebrow dark-eyebrow"><span></span> STRAIGHTFORWARD PRICING</p><h2>Pick the right fit.</h2></div><p>One clear price. No monthly website fees.<br>Choose a package to get your WhatsApp invoice.</p></div>
+      <div class="plan-grid">
+        <article class="plan-card" data-plan="Starter Website" data-price="1640">
+          <div class="plan-top"><span class="plan-icon">01</span><span class="plan-label">A GREAT PLACE TO START</span></div><h3>Starter Website</h3><p class="plan-summary">A polished home for your business online.</p>
+          <div class="plan-price"><span>R</span>1,640<small>once-off</small></div>
+          <ul class="feature-list"><li>1-page mobile-friendly website</li><li>Up to 5 products or services</li><li>Home, About &amp; Contact sections</li><li>WhatsApp order button</li><li>Instagram &amp; TikTok links</li><li>Free GitHub hosting</li><li>Delivery in 2–3 days</li></ul>
+          <button class="plan-button" type="button">Choose Starter <span aria-hidden="true">→</span></button>
         </article>
-        <a class="whatsapp" href="https://wa.me/2777574436" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
-          <span>☎</span><div><strong>DM TO ORDER</strong><small>WhatsApp: 0677574436</small></div>
-        </a>
-      </aside>
+        <article class="plan-card plan-featured" data-plan="Business Website" data-price="2500">
+          <div class="popular-badge"><span>✦</span> MOST POPULAR</div><div class="plan-top"><span class="plan-icon">02</span><span class="plan-label">READY TO GROW</span></div><h3>Business Website</h3><p class="plan-summary">A complete online shop built around your brand.</p>
+          <div class="plan-price"><span>R</span>2,500<small>once-off</small></div>
+          <ul class="feature-list"><li>Full online shop website</li><li>Up to 20 products</li><li>Categories &amp; filter buttons</li><li>Product options &amp; add-to-bag</li><li>WhatsApp checkout</li><li>Our Story &amp; Contact pages</li><li>Brand-matched colours &amp; logo</li><li>Free GitHub hosting</li><li>Delivery in 3–5 days</li></ul>
+          <button class="plan-button" type="button">Choose Business <span aria-hidden="true">→</span></button>
+        </article>
+        <article class="plan-card" data-plan="Pro Online Shop" data-price="4500">
+          <div class="plan-top"><span class="plan-icon">03</span><span class="plan-label">BUILT TO SELL MORE</span></div><h3>Pro Online Shop</h3><p class="plan-summary">More control and more ways to sell online.</p>
+          <div class="plan-price"><span>R</span>4,500<small>once-off</small></div>
+          <ul class="feature-list"><li>Everything in Business</li><li>Up to 50 products</li><li>Product search bar</li><li>Card, PayFast or Yoco payments</li><li>Delivery options</li><li>Add products yourself</li><li>.co.za domain setup*</li><li>Delivery in 5–7 days</li></ul>
+          <button class="plan-button" type="button">Choose Pro <span aria-hidden="true">→</span></button>
+        </article>
+      </div>
+      <p class="pricing-note">* Domain registration is charged separately. Hosting and email available as an add-on.</p>
     </section>
+
+    <section class="extras-section section" id="addons"><div class="extras-intro"><p class="eyebrow dark-eyebrow"><span></span> MAKE IT YOURS</p><h2>Helpful extras.<br><span>Only if you need them.</span></h2><p>Add the finishing touches to your website project. We’ll include your choices in your WhatsApp quote.</p></div>
+      <div class="addon-card"><div class="addon-head"><h3>Optional add-ons</h3><span>ONCE-OFF PRICING</span></div><div class="addon-list">
+        <label class="addon-row"><span class="addon-check-wrap"><input type="checkbox" class="addon-check" data-name="Hosting + Email (1 year)" data-price="830"><i></i></span><span class="addon-name">Hosting + Email <small>1 year</small></span><b>R830</b></label>
+        <label class="addon-row"><span class="addon-check-wrap"><input type="checkbox" class="addon-check" data-name=".co.za Domain (1 year)" data-price="250"><i></i></span><span class="addon-name">.co.za Domain <small>1 year</small></span><b>R250</b></label>
+        <label class="addon-row"><span class="addon-check-wrap"><input type="checkbox" class="addon-check" data-name="Website update / change" data-price="400"><i></i></span><span class="addon-name">Website update / change <small>per update</small></span><b>R400</b></label>
+        <label class="addon-row"><span class="addon-check-wrap"><input type="checkbox" class="addon-check" data-name="Logo design" data-price="400"><i></i></span><span class="addon-name">Logo design</span><b>R400</b></label>
+        <label class="addon-row"><span class="addon-check-wrap"><input type="checkbox" class="addon-check" data-name="Extra 10 products" data-price="600"><i></i></span><span class="addon-name">Extra 10 products</span><b>R600</b></label>
+        <label class="addon-row"><span class="addon-check-wrap"><input type="checkbox" class="addon-check" data-name="Business WhatsApp setup" data-price="0"><i></i></span><span class="addon-name">Business WhatsApp setup</span><b class="free">FREE</b></label>
+      </div><div class="addon-total"><span>Selected add-ons</span><strong id="addon-total">R0</strong></div></div>
+    </section>
+
+    <section class="process-section section" id="how-it-works"><div class="section-heading process-heading"><div><p class="eyebrow"><span></span> SIMPLE FROM START TO LAUNCH</p><h2>Good things, made easy.</h2></div><p>Clear communication and a smooth journey<br>from your first message to launch day.</p></div><div class="steps"><article><span>01</span><h3>Choose your package</h3><p>Pick the website that matches where your business is today.</p></article><article><span>02</span><h3>Tell us about your business</h3><p>Share your ideas, content and the look you have in mind.</p></article><article><span>03</span><h3>We build your website</h3><p>We bring your brand online and keep you updated along the way.</p></article><article><span>04</span><h3>Review &amp; launch</h3><p>Approve the final details and get ready to welcome your customers.</p></article></div></section>
+
+    <section class="closing-cta"><div><p class="eyebrow"><span></span> YOUR NEXT CHAPTER STARTS HERE</p><h2>Let’s build something<br><em>great together.</em></h2></div><a class="button button-light" href="https://wa.me/27677574436?text=Hi%20AbantuWeb%20SA%2C%20I%27d%20like%20to%20discuss%20a%20website." target="_blank" rel="noopener">Chat with us on WhatsApp <span aria-hidden="true">↗</span></a></section>
   </main>
+  <footer class="site-footer"><a class="wordmark footer-mark" href="#home"><span class="brand-mark">A</span><span>Abantu<span class="wordmark-blue">Web</span><small>WEB DESIGN STUDIO</small></span></a><p>Made with care for South African businesses.</p><span>© <span id="year"></span> AbantuWeb SA</span></footer>
+
+  <dialog class="invoice-dialog" id="invoice-dialog" aria-labelledby="invoice-title"><form method="dialog" class="dialog-dismiss"><button class="dialog-close" aria-label="Close invoice dialog">×</button></form><div class="invoice-mark">A</div><p class="eyebrow dark-eyebrow"><span></span> YOUR PROJECT SUMMARY</p><h2 id="invoice-title">Your WhatsApp invoice</h2><p class="invoice-intro">Review your selection, then send it to us on WhatsApp. We’ll confirm your details and arrange the 50% deposit.</p><div class="invoice-lines"><div><span id="invoice-plan-name">Website package</span><strong id="invoice-plan-price">R0</strong></div><div id="invoice-addons"></div><div class="invoice-total"><span>Estimated total</span><strong id="invoice-total">R0</strong></div><small>50% deposit to start; remaining 50% when your website is complete.</small></div><label class="customer-label" for="customer-name">Your name <span>(optional)</span></label><input id="customer-name" class="customer-input" type="text" placeholder="How should we address you?" autocomplete="name"><a class="button button-primary invoice-send" id="invoice-send" href="#" target="_blank" rel="noopener">Send invoice on WhatsApp <span aria-hidden="true">↗</span></a><button type="button" class="dialog-back" id="dialog-back">Back to packages</button></dialog>
 </body>
 </html>
