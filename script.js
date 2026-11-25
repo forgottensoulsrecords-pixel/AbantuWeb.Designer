@@ -1,53 +1,10 @@
-const WHATSAPP_NUMBER = '27677574436';
-const formatRand = (amount) => `R${new Intl.NumberFormat('en-ZA', { maximumFractionDigits: 0 }).format(amount)}`;
-const addonInputs = [...document.querySelectorAll('.addon-check')];
-const dialog = document.querySelector('#invoice-dialog');
-let selectedPlan = null;
-
-function getAddons() {
-  return addonInputs.filter((input) => input.checked).map((input) => ({name: input.dataset.name, price: Number(input.dataset.price)}));
-}
-
-function updateTotal() {
-  const total = getAddons().reduce((sum, addon) => sum + addon.price, 0);
-  document.querySelector('#addon-total').textContent = formatRand(total);
-}
-
-function escapeHtml(value) {
-  return value.replace(/[&<>"']/g, (character) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[character]);
-}
-
-function updateInvoice() {
-  if (!selectedPlan) return;
-  const addons = getAddons();
-  const addOnTotal = addons.reduce((sum, addon) => sum + addon.price, 0);
-  const total = selectedPlan.price + addOnTotal;
-  const deposit = Math.ceil(total / 2);
-  document.querySelector('#invoice-plan-name').textContent = selectedPlan.name;
-  document.querySelector('#invoice-plan-price').textContent = formatRand(selectedPlan.price);
-  document.querySelector('#invoice-addons').innerHTML = addons.length
-    ? addons.map((addon) => `<div class="invoice-extra"><span>${escapeHtml(addon.name)}</span><strong>${addon.price ? formatRand(addon.price) : 'FREE'}</strong></div>`).join('')
-    : '<div class="invoice-extra"><span>No add-ons selected</span><strong>—</strong></div>';
-  document.querySelector('#invoice-total').textContent = formatRand(total);
-  document.querySelector('#invoice-deposit').textContent = formatRand(deposit);
-  const customerName = document.querySelector('#customer-name').value.trim();
-  const message = ['Hi AbantuWeb.Designer! Please prepare an invoice for my website order.', '', `Website package: ${selectedPlan.name} — ${formatRand(selectedPlan.price)}`,
-    ...addons.map((addon) => `Add-on: ${addon.name} — ${addon.price ? formatRand(addon.price) : 'FREE'}`),
-    `Estimated total: ${formatRand(total)}`, `50% deposit to start: ${formatRand(deposit)}`, 'Remaining 50% due when the website is complete.',
-    ...(customerName ? ['', `My name: ${customerName}`] : []), '', 'Please confirm the invoice and next steps. Thank you!'].join('\n');
-  document.querySelector('#invoice-send').href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-}
-
-document.querySelectorAll('.plan').forEach((card) => {
-  card.querySelector('.plan-button').addEventListener('click', () => {
-    selectedPlan = { name: card.dataset.plan, price: Number(card.dataset.price) };
-    updateInvoice();
-    dialog.showModal();
-  });
-});
-addonInputs.forEach((input) => input.addEventListener('change', () => {updateTotal(); if (dialog.open) updateInvoice();}));
-document.querySelector('#customer-name').addEventListener('input', updateInvoice);
-document.querySelector('#dialog-close').addEventListener('click', () => dialog.close());
-document.querySelector('#dialog-back').addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', (event) => {if (event.target === dialog) dialog.close();});
-document.querySelector('#year').textContent = new Date().getFullYear();
+const WHATSAPP_NUMBER='27677574436';
+const formatRand=(amount)=>`R${new Intl.NumberFormat('en-ZA',{maximumFractionDigits:0}).format(amount)}`;
+const addonInputs=[...document.querySelectorAll('.addon-check')];
+const dialog=document.querySelector('#invoice-dialog');
+let selectedPlan=null;
+function getAddons(){return addonInputs.filter((input)=>input.checked).map((input)=>({name:input.dataset.name,price:Number(input.dataset.price)}));}
+function updateTotal(){const total=getAddons().reduce((sum,addon)=>sum+addon.price,0);document.querySelector('#addon-total').textContent=formatRand(total);}
+function escapeHtml(value){return value.replace(/[&<>"']/g,(character)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[character]);}
+function updateInvoice(){if(!selectedPlan)return;const addons=getAddons();const addOnTotal=addons.reduce((sum,addon)=>sum+addon.price,0);const total=selectedPlan.price+addOnTotal;const deposit=Math.ceil(total/2);document.querySelector('#invoice-plan-name').textContent=selectedPlan.name;document.querySelector('#invoice-plan-price').textContent=formatRand(selectedPlan.price);document.querySelector('#invoice-addons').innerHTML=addons.length?addons.map((addon)=>`<div class="invoice-extra"><span>${escapeHtml(addon.name)}</span><strong>${addon.price?formatRand(addon.price):'FREE'}</strong></div>`).join(''):'<div class="invoice-extra"><span>No add-ons selected</span><strong>—</strong></div>';document.querySelector('#invoice-total').textContent=formatRand(total);document.querySelector('#invoice-deposit').textContent=formatRand(deposit);const customerName=document.querySelector('#customer-name').value.trim();const message=['Hi AbantuWeb.Designer! Please prepare an invoice for my website order.','',`Website package: ${selectedPlan.name} — ${formatRand(selectedPlan.price)}`,...addons.map((addon)=>`Add-on: ${addon.name} — ${addon.price?formatRand(addon.price):'FREE'}`),`Estimated total: ${formatRand(total)}`,`50% deposit to start: ${formatRand(deposit)}`,'Remaining 50% due when the website is complete.',...(customerName?['',`My name: ${customerName}`]:[]),'','Please confirm the invoice and next steps. Thank you!'].join('\n');document.querySelector('#invoice-send').href=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;}
+document.querySelectorAll('.plan').forEach((card)=>{card.querySelector('.plan-button').addEventListener('click',()=>{selectedPlan={name:card.dataset.plan,price:Number(card.dataset.price)};updateInvoice();dialog.showModal();});});addonInputs.forEach((input)=>input.addEventListener('change',()=>{updateTotal();if(dialog.open)updateInvoice();}));document.querySelector('#customer-name').addEventListener('input',updateInvoice);document.querySelector('#dialog-close').addEventListener('click',()=>dialog.close());document.querySelector('#dialog-back').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',(event)=>{if(event.target===dialog)dialog.close();});document.querySelector('#year').textContent=new Date().getFullYear();
